@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chloe Tan — Cybersecurity Portfolio</title>
+  <meta name="description" content="Portfolio of Chloe Tan — Higher Nitec Cyber & Network Security undergraduate. Projects, skills, contact." />
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent: #7c5cff;
+      --glass: rgba(255, 255, 255, 0.04);
+      --rounded: 16px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(180deg, #081028 0%, #071020 100%);
+      color: #e6eef8;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: #0b1220;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 2px 0 12px rgba(0,0,0,0.4);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    nav h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 12px;
+      border-radius: 12px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(124, 92, 255, 0.15);
+      color: #fff;
+    }
+
+    main {
+      padding: 32px;
+      overflow-y: auto;
+    }
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: var(--rounded);
+      box-shadow: 0 8px 20px rgba(2,6,23,0.6);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: var(--accent);
+      font-size: 22px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    ul.meta {
+      padding-left: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .gallery img {
+      width: 180px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(124,92,255,0.5);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s;
+    }
+
+    .modal img {
+      max-width: 85%;
+      max-height: 85%;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(124,92,255,0.7);
+    }
+
+    .modal:target { display: flex; }
+
+    footer {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    @media(max-width:800px) {
+      .container { grid-template-columns: 1fr; }
+      nav { flex-direction: row; overflow-x: auto; height: auto; padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <h2>Portfolio</h2>
+      <a href="#about">About Me</a>
+      <a href="#achievements">Achievements & Certification</a>
+      <a href="#projects">Project Experience</a>
+      <a href="#ctf">CTF</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section id="about" class="card">
+        <h3>About Me</h3>
+        <p class="meta">
+          Hello, I am Chloe, currently a Higher Nitec Cyber and Network Security undergraduate. I am determined to achieve my goals and do my best to overcome challenging assignments. I am passionate about cybersecurity because I want to make meaningful contributions to the industry and help protect individuals and organizations from cyber threats. I feel that doing this is very meaningful as I can contribute to society.
+        </p>
+        <p class="meta">
+          In my free time, I love to learn new things. Recently, I've picked up HTML and have been enjoying the process of building this website. This new skill has allowed me to combine creativity with technical knowledge.
+        </p>
+        <p class="meta">Thank you for visiting my website, and I hope you enjoy exploring my work!</p>
+      </section>
+
+      <section id="achievements" class="card">
+        <h3>Achievements & Certification</h3>
+        <ul class="meta">
+          <li>Certified Secure Computer User v3 (CSCU) (2024)</li>
+          <li>Fortinet Certified Fundamentals in Cybersecurity (2024)</li>
+          <li>Fortinet Certified Associate in Cybersecurity (2024)</li>
+          <li>XDR Certified Analyst (2024)</li>
+          <li>XDR Certified Administrator (2024)</li>
+          <li>BOON LAY SECONDARY Colour awards (2021, 2022)</li>
+          <li>Singapore Youth Festival (2021)</li>
+          <li>Edusave Merit Bursary (2021)</li>
+          <li>Certificate of Academic Achievement (2022)</li>
+          <li>Edusave scholarship (2022)</li>
+          <li>National Youth Achievement Award (2024)</li>
+        </ul>
+        <div class="gallery">
+          <a href="#img1"><img src="cert1.jpg" alt="Certification 1"></a>
+          <a href="#img2"><img src="cert2.jpg" alt="Certification 2"></a>
+        </div>
+      </section>
+
+      <section id="projects" class="card">
+        <h3>Project Experience</h3>
+        <ul class="meta">
+          <li><strong>SCHOOL PROJECT:</strong> Design thinking for technology project, Personal and Professional Development Project</li>
+          <li><strong>COMMUNITY WORK:</strong> Volunteering at EMB Presentation, Chingay 2024 Volunteer (Crowd Management)</li>
+          <li><strong>OTHERS:</strong> Coding this website, Virtual machine presentation</li>
+        </ul>
+      </section>
+
+      <section id="ctf" class="card">
+        <h3>CTF</h3>
+        <p class="meta">
+          Participated in capture-the-flag competitions focused on web vulnerabilities, enumeration, and forensics. Practice includes tools such as Nikto and Hydra.
+        </p>
+        <div class="gallery">
+          <a href="#ctf1"><img src="ctf1.jpg" alt="CTF 1"></a>
+          <a href="#ctf2"><img src="ctf2.jpg" alt="CTF 2"></a>
+          <a href="#ctf3"><img src="ctf3.jpg" alt="CTF 3"></a>
+        </div>
+      </section>
+
+      <section id="leadership" class="card">
+        <h3>Leadership</h3>
+        <p class="meta">
+          <strong>(2024) Art club exco:</strong> My duties as an art club exco include hosting events and house duties. We create art pieces and sell them for funds, keeping it for future use.
+        </p>
+        <p class="meta">
+          <strong>(2022) Concert band section leader:</strong> My duties as a concert band section leader include ensuring all members understand the music and their roles, addressing any issues or conflicts within the band, and working with management on scheduling performances.
+        </p>
+      </section>
+
+      <section id="contact" class="card">
+        <h3>Contact</h3>
+        <p class="meta">Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p class="meta">Location: Singapore</p>
+        <p class="meta"><a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+      </section>
+
+      <footer>
+        <p>Made with care — replace placeholders (email, links, images) with your own content.</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Modal for enlarged images -->
+  <div id="img1" class="modal">
+    <a href="#achievements"><img src="cert1.jpg" alt="Certificate 1"></a>
+  </div>
+  <div id="img2" class="modal">
+    <a href="#achievements"><img src="cert2.jpg" alt="Certificate 2"></a>
+  </div>
+  <div id="ctf1" class="modal">
+    <a href="#ctf"><img src="ctf1.jpg" alt="CTF 1"></a>
+  </div>
+  <div id="ctf2" class="modal">
+    <a href="#ctf"><img src="ctf2.jpg" alt="CTF 2"></a>
+  </div>
+  <div id="ctf3" class="modal">
+    <a href="#ctf"><img src="ctf3.jpg" alt="CTF 3"></a>
+  </div>
+</body>
+</html>
